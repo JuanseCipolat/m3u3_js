@@ -1,14 +1,12 @@
 function obtenerNumeroMayor() {
-  var numeros = prompt("Ingresa una lista de números separados por comas:");
-  var numerosarray = numeros.split(",");
-
-  var mayor = parseFloat(numerosarray[0]);
-  for (var i = 1; i < numerosarray.length; i++) {
-    var numero = parseFloat(numerosarray[i]);
-    if (numero > mayor) {
-      mayor = numero;
+  var numeros = [1, 4, 6, 7, 23, 454, 777, 233, 343, 100];
+  var mayor = numeros[0];
+  for (var i = 1; i < numeros.length; i++) {
+    if (numeros[i] > mayor) {
+      mayor = numeros[i];
     }
   }
 
   document.write("El número mayor es: " + mayor);
+  console.log("El número mayor es: " + mayor);
 }
